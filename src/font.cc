@@ -122,7 +122,7 @@ void TFont::reloadAll()
 	unsigned char a[FONT_SCALE_H][FONT_SCALE_H];
 
 	int i,res,j,k,ch;
-	FT_Set_Char_Size( face, scale*64, scale*64, 96, 96);
+	FT_Set_Pixel_Sizes(face,FONT_SCALE_H,FONT_SCALE_H);
 	//DBG(FONT,"%d %d %d %d %d %d\n",min_v,max_v,min_h,max_h,max_v-min_v,max_h-min_h);
 	DBG(FONT,"%d\n", scale);
 	for (ch=0; ch<256; ch++)
